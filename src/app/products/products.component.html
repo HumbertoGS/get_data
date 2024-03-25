@@ -1,0 +1,28 @@
+<div class="content">
+  <div *ngFor="let item of products" class="content-product">
+    <div class="content-product-img">
+      <img [src]="item.image" width="100" height="120" />
+    </div>
+
+    <div class="content-product-data">
+      <div class="content-product-data-description">
+        <label class="content-product-data-description-title">{{
+          item.title
+        }}</label>
+        <label class="content-product-data-description-price"
+          >${{ item.price }}</label
+        >
+      </div>
+
+      <div class="content-product-data-button">
+        <button class="content-product-data-button-more">+</button>
+        <button
+          class="content-product-data-button-add"
+          (click)="incrementCounter()"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
